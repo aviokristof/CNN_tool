@@ -5,9 +5,17 @@ images of different type than images that we want to detect.
 
 ## How to use the tool?
 
+For Linux OS
+
+You need two directories with images. One directory with type of images that you want to detect and second directory with random type images.
+
+In terminal use the command
+
 Command:
 
 create_CNN [dir_to_images_to_train] [dir_to_image_different_than_images_to_train]
+
+As the result you will get trained deep neural network saved in {name}.h5 file in cwd of repository
 
 Configuration of neural network structure:
 
