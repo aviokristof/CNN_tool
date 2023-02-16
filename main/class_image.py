@@ -3,7 +3,7 @@
 import os
 import shutil
 import cv2
-
+import re
 class Photo:
     '''
         Class Photo is used to copy images from directories and use them in training convolutional neural network.
@@ -51,8 +51,9 @@ class Photo:
         dir_name = "class_trained" if flag == "yes" else "opposite_class"
         
         src_file = os.listdir(input_file)
+        image_list_sorted = sorted(src_file,key=lambda f: int(re.sub('\D', '', f)))
 
-        for index,file_name in enumerate(src_file,start=1):
+        for index,file_name in enumerate(image_list_sorted,start=1):
             if index < self.train_len+1:
                 dest_dir = f"{os.getcwd()}/train/{dir_name}/{name}_{index}.jpg"
             elif self.train_len-1 < index < self.train_len+self.valid_len+1:
