@@ -93,7 +93,7 @@ def from_config(yes_image_input_dir,no_image_input_dir,target):
     #1.
     image,conv_layer,dense,dropout,output_activation,fit,evaluate = load_config()
     #2.
-    data_format = image_prepare(image['number_of_classes'],no_image_input_dir,yes_image_input_dir,image['train_image'],image['valid_image'],image['test_image'],image['width'],image['height'],image['color'],target)
+    data_format = image_prepare(image['number_of_classes'],no_image_input_dir,yes_image_input_dir,image['train_image'],image['valid_image'],image['test_image'],image['width'],image['height'],image['color'],evaluate,target)
     #3.
     input_data_frame = data_format.image_data(os.getcwd())#directory same as setup.py file
     #4.
@@ -145,7 +145,7 @@ def create_CNN(yes_image_input,no_image_input,target):
     from_config(yes_image_input,no_image_input,target)
 
          
-def image_prepare(num_classes,no_image_input,yes_image_input,train_len,valid_len,test_len,width,height,color,target):#ad target
+def image_prepare(num_classes,no_image_input,yes_image_input,train_len,valid_len,test_len,width,height,color,names,target):#ad target
     '''
     Creating directory tree in cwd. Copying images from yes/no type photos folders and resizing images.
     '''
@@ -153,8 +153,8 @@ def image_prepare(num_classes,no_image_input,yes_image_input,train_len,valid_len
     import_image = CNN(num_classes,train_len,valid_len,test_len,width,height,color)
     import_image.from_dir_to_structure(target)
 
-    import_image.copy_image(yes_image_input,"dron","yes")
-    import_image.copy_image(no_image_input,"nie_dron","no")
+    import_image.copy_image(yes_image_input,names["class_1"],"yes")
+    import_image.copy_image(no_image_input,names["class_2"],"no")
 
     dir_1 = ("train","valid","test")
     dir_2 = ("class_trained","opposite_class")
