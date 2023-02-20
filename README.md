@@ -9,11 +9,13 @@ images of different type than images that we want to detect.
 
 1. command takes two inputs yes/no directory. As an input tool takes paths to two directories and path were we want to save trained deep neural network. Directory with images that we want to detect (yes_image_dir), directory with images different than the images that we want to detect (no_images_dir) and target directory (target). By default target is cwd.
 
-![Screenshot from 2023-02-18 20-38-37](https://user-images.githubusercontent.com/91827782/219903632-362dbf72-9055-405a-ac7c-7a133ef026a5.png)
+![image](https://user-images.githubusercontent.com/91827782/220096494-3718b8ad-a7a3-43f4-beec-c774cc1fb977.png)
+
 
 2. preparing photos in directories to train, separate images to test/train/valid directories. First step is to create data tree with passed images in cwd. After data tree is created images are turned into an numpy array np.shape(number of images, width of image, height of image, colors of image) and labeled np.shape(number of images, number of labels) (more details in prepare_input.py image_data())
 
-![Screenshot from 2023-02-18 20-39-42](https://user-images.githubusercontent.com/91827782/219903639-e11d5c71-b303-4557-831e-17c10cc84c9e.png)
+![image](https://user-images.githubusercontent.com/91827782/220109434-ac982b97-cad7-4177-b4ca-4a80e383ba4b.png)
+
 
 3. creates convolutional neural network in the designed pattern with parameters from config.ini file. When input data are prepared the are passed to created convolutional neural network structure. Parameters of CNN are configurable in config.ini file.
 
@@ -36,27 +38,27 @@ images of different type than images that we want to detect.
 python modules/technologies used in tool
 cv2 OpenCV
 
-![image](https://user-images.githubusercontent.com/91827782/219903685-de5a2e6b-1e36-4327-a89f-a431c1d08028.png)
+![image](https://user-images.githubusercontent.com/91827782/220095740-616e2d60-a350-469e-9c7c-75a49450ac84.png)
 
 click
 
-![image](https://user-images.githubusercontent.com/91827782/219903695-e10b8cfb-bac9-4998-9d5f-037ed94a56db.png)
+![image](https://user-images.githubusercontent.com/91827782/220095844-b8068bad-0730-4b0c-af7a-174ba9815e23.png)
 
 from configparser import ConfigParser image logo
 
 numpy image logo
 
-![image](https://user-images.githubusercontent.com/91827782/219903714-bb8df901-d525-43e5-a83b-746d88f08494.png)
+![image](https://user-images.githubusercontent.com/91827782/220095615-f2e30d6f-c937-4715-8edd-45cb59d40fd6.png)
 
 
 keras image logo + tensorflow
 
-![image](https://user-images.githubusercontent.com/91827782/219903730-4b30fc25-ceb7-47d0-87b5-bd14a413b8c2.png)
+![image](https://user-images.githubusercontent.com/91827782/220095205-2aea96aa-9ffb-4932-8478-1c61ef0d9391.png)
 
 
 matplotlib image logo
 
-![image](https://user-images.githubusercontent.com/91827782/219903739-7eabc612-bf7a-48b2-bf13-5622f1b5cc02.png)
+![image](https://user-images.githubusercontent.com/91827782/220095320-69566ac2-9096-4ed9-8c55-4c952b05f0e0.png)
 
 
 How to Install and Run the Project?
