@@ -5,7 +5,7 @@ images of different type than images that we want to detect.
 
 ## **Description**
 
-1. **Command**
+**1. Command**
 
 Command takes two inputs yes/no directory. As an input tool takes paths to two directories and path were we want to save trained deep neural network. Directory with images that we want to detect (yes_image_dir), directory with images different than the images that we want to detect (no_images_dir) and target directory (target). By default target is cwd.
 
@@ -13,12 +13,12 @@ Command takes two inputs yes/no directory. As an input tool takes paths to two d
   <img src="https://user-images.githubusercontent.com/91827782/220096494-3718b8ad-a7a3-43f4-beec-c774cc1fb977.png" />
 </p>
 
-2. **Input images** 
+**2. Input images** 
 
 Preparing photos in directories to train, separate images to test/train/valid directories. First step is to create data tree with passed images in cwd. After data tree is created images are turned into an numpy array np.shape(number of images, width of image, height of image, colors of image) and labeled np.shape(number of images, number of labels) (more details in prepare_input.py image_data())
 
 
-3. **CNN structure**
+**3. CNN structure**
 
 Creates convolutional neural network in the designed pattern with parameters from config.ini file. When input data are prepared the are passed to created convolutional neural network structure. Parameters of CNN are configurable in config.ini file.
 
@@ -26,7 +26,7 @@ Creates convolutional neural network in the designed pattern with parameters fro
   <img src="https://user-images.githubusercontent.com/91827782/220151177-7a29dd2c-8b03-4a4f-aae7-672938de1366.png" />
 </p>
 
-4.  **Fitting model**
+**4.  Fitting model**
 
 Fitting trained neural network. Next step is to fit created model of CNN and save trained neural network in {name}.h5 file
 
@@ -34,13 +34,13 @@ Fitting trained neural network. Next step is to fit created model of CNN and sav
   <img src="https://user-images.githubusercontent.com/91827782/220151000-1f046e9d-4a1f-4f39-843c-23a29e9f90d3.png" />
 </p>
 
-5.  **Testing accuracy**
+**5.  Testing accuracy**
 
 Testing accuracy with test directory photos
 
 .jpg TODO
 
-6. **Results**
+**6. Results**
 
 Printing results
 
