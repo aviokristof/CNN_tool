@@ -48,6 +48,7 @@ Printing results
 
 ## **Python modules used in tool**
 
+![image](https://user-images.githubusercontent.com/91827782/220164949-89e622dd-2c9b-4f27-abf9-666e20337e74.png)
 
 ![image](https://user-images.githubusercontent.com/91827782/220095844-b8068bad-0730-4b0c-af7a-174ba9815e23.png)
 
