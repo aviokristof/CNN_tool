@@ -5,18 +5,17 @@ images of different type than images that we want to detect.
 
 ## **Description**
 
-1. Command takes two inputs yes/no directory. As an input tool takes paths to two directories and path were we want to save trained deep neural network. Directory with images that we want to detect (yes_image_dir), directory with images different than the images that we want to detect (no_images_dir) and target directory (target). By default target is cwd.
+1. command takes two inputs yes/no directory. As an input tool takes paths to two directories and path were we want to save trained deep neural network. Directory with images that we want to detect (yes_image_dir), directory with images different than the images that we want to detect (no_images_dir) and target directory (target). By default target is cwd.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/91827782/220096494-3718b8ad-a7a3-43f4-beec-c774cc1fb977.png" />
 </p>
 
+2. preparing photos in directories to train, separate images to test/train/valid directories. First step is to create data tree with passed images in cwd. After data tree is created images are turned into an numpy array np.shape(number of images, width of image, height of image, colors of image) and labeled np.shape(number of images, number of labels) (more details in prepare_input.py image_data())
 
 2. Preparing photos in directories to train, separate images to test/train/valid directories. First step is to create data tree with passed images in cwd. After data tree is created images are turned into an numpy array np.shape(number of images, width of image, height of image, colors of image) and labeled np.shape(number of images, number of labels) (more details in prepare_input.py image_data())
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/91827782/220109434-ac982b97-cad7-4177-b4ca-4a80e383ba4b.png" />
-</p>
+3. creates convolutional neural network in the designed pattern with parameters from config.ini file. When input data are prepared the are passed to created convolutional neural network structure. Parameters of CNN are configurable in config.ini file.
 
 3. Creates convolutional neural network in the designed pattern with parameters from config.ini file. When input data are prepared the are passed to 
 
@@ -38,7 +37,8 @@ images of different type than images that we want to detect.
 
 ## **Modules used in tool**
 
-![image](https://user-images.githubusercontent.com/91827782/220152612-f0039670-70d5-49a6-bb1c-e6dcb298b0e5.png)
+python modules/technologies used in tool
+cv2 OpenCV
 
 ![image](https://user-images.githubusercontent.com/91827782/220095844-b8068bad-0730-4b0c-af7a-174ba9815e23.png)
 
@@ -152,3 +152,5 @@ preparing input images data frame (from directories) -> creating deep neural net
 
 As a user we are passing path to directories with yes/no images and setting up config.ini file. If we don't want to change deep neural network structure we can use deafult config.ini file.
 output is saved in name.h5 file in current working directory 
+
+
