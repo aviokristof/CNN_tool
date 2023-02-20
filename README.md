@@ -9,22 +9,27 @@ images of different type than images that we want to detect.
 
 1. command takes two inputs yes/no directory. As an input tool takes paths to two directories and path were we want to save trained deep neural network. Directory with images that we want to detect (yes_image_dir), directory with images different than the images that we want to detect (no_images_dir) and target directory (target). By default target is cwd.
 
-![image](https://user-images.githubusercontent.com/91827782/220096494-3718b8ad-a7a3-43f4-beec-c774cc1fb977.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/91827782/220096494-3718b8ad-a7a3-43f4-beec-c774cc1fb977.png" />
+</p>
 
 
 2. preparing photos in directories to train, separate images to test/train/valid directories. First step is to create data tree with passed images in cwd. After data tree is created images are turned into an numpy array np.shape(number of images, width of image, height of image, colors of image) and labeled np.shape(number of images, number of labels) (more details in prepare_input.py image_data())
 
-![image](https://user-images.githubusercontent.com/91827782/220109434-ac982b97-cad7-4177-b4ca-4a80e383ba4b.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/91827782/220109434-ac982b97-cad7-4177-b4ca-4a80e383ba4b.png" />
+</p>
 
+3. creates convolutional neural network in the designed pattern with parameters from config.ini file. When input data are prepared the are passed to 
 
-3. creates convolutional neural network in the designed pattern with parameters from config.ini file. When input data are prepared the are passed to created convolutional neural network structure. Parameters of CNN are configurable in config.ini file.
-
-![Structure](https://user-images.githubusercontent.com/91827782/219903643-9263b176-1494-4b6b-ba52-983597507567.jpg)
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/91827782/220151177-7a29dd2c-8b03-4a4f-aae7-672938de1366.png" />
+</p>
 4. fitting trained neural network. Next step is to fit created model of CNN and save trained neural network in {name}.h5 file
 
-![fit](https://user-images.githubusercontent.com/91827782/219903648-53894bf3-8c2b-43d6-839a-d4ba0a89be4a.jpg)
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/91827782/220151000-1f046e9d-4a1f-4f39-843c-23a29e9f90d3.png" />
+</p>
 5. testing accuracy with test directory photos
 
 .jpg TODO
