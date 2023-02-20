@@ -63,27 +63,28 @@ Printing results
 
 Step by step
 
+Prepare two dir with images one with images that you want to train and one with images different than imaages to train
+
 clone repo
+
+Clone repository from github or download zip file.
 
 run it from repo dir where you cloned it
 
-prepare two dir with images one with images that you want to train and one with images different than imaages to train
+Open cloned directory and run in terminal "pip install .". Run from description image1.1. To run tool succesfully you need python 3.10> and python modules from 2.2
 
 pass two prepared dirs
 
 results .h5 and plots in cwd
 
+Results .h5 file saved in cwd. And plots are also saved.
 
 
-For Linux OS
 
-You need two directories with images. One directory with type of images that you want to detect and second directory with random type images.
-
-In terminal use the command
 
 Command:
 
-create_CNN [dir_to_images_to_train] [dir_to_image_different_than_images_to_train]
+create_CNN [dir_to_images_to_train] [dir_to_image_different_than_images_to_train] ["target"]
 
 As the result you will get trained deep neural network saved in {name}.h5 file in cwd of repository
 
@@ -149,8 +150,6 @@ evalu ate
     - class_2: name of data labeled as different than data to trained
 
 
-You need two directories with two types of images. One directory contains images to detect and second directory contains different types of images that are not images that we want to detect.
-
 
 Structure of neural network and algorithm:
 
@@ -159,8 +158,4 @@ convolutional layer -> flatten layer -> dense layer -> dropout layer -> output d
 model fit -> model evaluate -> results show
 
 preparing input images data frame (from directories) -> creating deep neural network structure -> training created neural network with prepared input images
-
-As a user we are passing path to directories with yes/no images and setting up config.ini file. If we don't want to change deep neural network structure we can use deafult config.ini file.
-output is saved in name.h5 file in current working directory 
-
 
