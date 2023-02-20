@@ -3,29 +3,27 @@
 Image classification tool trains convolutional neural network from two types of images. Images that we want to detect and 
 images of different type than images that we want to detect.
 
-## **What does the tool do?**
-
 ## **Description**
 
-1. command takes two inputs yes/no directory. As an input tool takes paths to two directories and path were we want to save trained deep neural network. Directory with images that we want to detect (yes_image_dir), directory with images different than the images that we want to detect (no_images_dir) and target directory (target). By default target is cwd.
+1. Command takes two inputs yes/no directory. As an input tool takes paths to two directories and path were we want to save trained deep neural network. Directory with images that we want to detect (yes_image_dir), directory with images different than the images that we want to detect (no_images_dir) and target directory (target). By default target is cwd.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/91827782/220096494-3718b8ad-a7a3-43f4-beec-c774cc1fb977.png" />
 </p>
 
 
-2. preparing photos in directories to train, separate images to test/train/valid directories. First step is to create data tree with passed images in cwd. After data tree is created images are turned into an numpy array np.shape(number of images, width of image, height of image, colors of image) and labeled np.shape(number of images, number of labels) (more details in prepare_input.py image_data())
+2. Preparing photos in directories to train, separate images to test/train/valid directories. First step is to create data tree with passed images in cwd. After data tree is created images are turned into an numpy array np.shape(number of images, width of image, height of image, colors of image) and labeled np.shape(number of images, number of labels) (more details in prepare_input.py image_data())
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/91827782/220109434-ac982b97-cad7-4177-b4ca-4a80e383ba4b.png" />
 </p>
 
-3. creates convolutional neural network in the designed pattern with parameters from config.ini file. When input data are prepared the are passed to 
+3. Creates convolutional neural network in the designed pattern with parameters from config.ini file. When input data are prepared the are passed to 
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/91827782/220151177-7a29dd2c-8b03-4a4f-aae7-672938de1366.png" />
 </p>
-4. fitting trained neural network. Next step is to fit created model of CNN and save trained neural network in {name}.h5 file
+4. Fitting trained neural network. Next step is to fit created model of CNN and save trained neural network in {name}.h5 file
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/91827782/220151000-1f046e9d-4a1f-4f39-843c-23a29e9f90d3.png" />
@@ -40,41 +38,16 @@ images of different type than images that we want to detect.
 
 ## **Modules used in tool**
 
-python modules/technologies used in tool
-cv2 OpenCV
-
-![image](https://user-images.githubusercontent.com/91827782/220095740-616e2d60-a350-469e-9c7c-75a49450ac84.png)
-
-click
+![image](https://user-images.githubusercontent.com/91827782/220152612-f0039670-70d5-49a6-bb1c-e6dcb298b0e5.png)
 
 ![image](https://user-images.githubusercontent.com/91827782/220095844-b8068bad-0730-4b0c-af7a-174ba9815e23.png)
 
-from configparser import ConfigParser image logo
-
-numpy image logo
-
 ![image](https://user-images.githubusercontent.com/91827782/220095615-f2e30d6f-c937-4715-8edd-45cb59d40fd6.png)
-
-
-keras image logo + tensorflow
 
 ![image](https://user-images.githubusercontent.com/91827782/220095205-2aea96aa-9ffb-4932-8478-1c61ef0d9391.png)
 
-
-matplotlib image logo
-
 ![image](https://user-images.githubusercontent.com/91827782/220095320-69566ac2-9096-4ed9-8c55-4c952b05f0e0.png)
 
-
-How to Install and Run the Project?
-
-clone/copy -> run command Done
-
-How to Use the Project
-
-Add a License???
-
-Badges?
 
 ## How to use the tool?
 
