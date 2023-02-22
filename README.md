@@ -21,8 +21,8 @@ images of different type than images that we want to detect.
     2. Input images
     3. CNN structure
     4. Fitting model
-    5. Testing accuracy4
-    6. Results
+    5. Testing accuracy
+    6. Validation and accuracy
 
 **1.1 Command**
 
@@ -76,11 +76,19 @@ Testing accuracy with test directory images.
   <em>Figure [1.5] Testing accuracy</em>
 </p>
 
-**1.6 Results**
+**1.6 Validation and accuracy**
 
-Printing results
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/91827782/220735929-956e58b9-ca82-4916-999b-b529b269909a.png" />
+  <p align = "center">
+  <em>Figure [1.6] Model accuracy</em>
+</p>
 
-.jpg TODO
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/91827782/220735960-c9d3a27a-636d-4edc-9ed8-e8c02ec47e48.png" />
+  <p align = "center">
+  <em>Figure [1.7] Model loss</em>
+</p>
 
 ## **2. How to use the tool?**
 
